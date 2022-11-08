@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "mongodb": "^4.11.0",
+    "nodemon": "^2.0.20"
+  },
+  "name": "date-night-app",
+  "description": "Add date ideas then have one randomly chosen on date night.",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "dev": "npm nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TFuray/date-night-app.git"
+  },
+  "author": "Thomas Furay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TFuray/date-night-app/issues"
+  },
+  "homepage": "https://github.com/TFuray/date-night-app#readme"
+}

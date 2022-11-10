@@ -27,13 +27,18 @@
       <div class="card-panel red lighten-5">
         <div class="card-content">
           <h3 class="card-title">Random Date:</h3>
-          <li class="ideas">
-          <span><% var num = Math.random() * ideas.length ideas[num].idea %> </span>
-          <span><% ideas[num].location %> </span>
-          </li> 
+          <ul>
+            <% for(let i=0; i<ideas.length;i++) { %>
+            <li id="idea<%= i %> " class="hidden">
+              <div><%= ideas[i].idea %> </div>
+              <div><%= ideas[i].location %> </div>
+            </li>
+            <% } %>
+          </ul>
           <button type="button" class="waves-effect waves-light btn" id="randomDate">Random</button>
         </div>
       </div>
+      <hr />
       <div class="card-panel red lighten-5">
         <div class="card-content">
           <h3 class="card-title">Add Date Ideas:</h3>
@@ -49,9 +54,9 @@
               <input type="text" placeholder="Location" name="location" id="location">
               <!-- <label class="black-text" for="idea">Date Idea:</label> -->
             </div>
-              <button class="btn waves-effect waves-light" type="submit">Submit
-                <i class="material-icons right">send</i>
-              </button>
+            <button class="btn waves-effect waves-light" type="submit">Submit
+              <i class="material-icons right">send</i>
+            </button>
           </form>
 
 

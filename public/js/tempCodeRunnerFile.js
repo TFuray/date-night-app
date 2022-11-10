@@ -1,0 +1,1 @@
+  // document.querySelector(`#${num}`).classList.remove('hidden')

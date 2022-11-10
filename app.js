@@ -6,7 +6,7 @@ const port = process.env.PORT
 
 let db, ideasCollection
 const dbConnectionStr = process.env.DB_STRING,
-      dbName = 'Date-Ideas'
+  dbName = 'Date-Ideas'
 
 MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true }).then(
   client => {
@@ -28,7 +28,7 @@ app.get('/', (request, response) => {
       .toArray()
       .then(results => {
         console.log(results)
-        res.render('index.ejs', { ideas: results })
+        response.render('index.ejs', { ideas: results })
       })
   } catch (error) {
     console.error(error)
@@ -40,7 +40,7 @@ app.post('/addIdea', (request, response) => {
     .insertOne(request.body)
     .then(result => {
       console.log(`successful post of ${result}`)
-      res.redirect('/')
+      response.redirect('/')
     })
     .catch(error => console.error(error))
 })

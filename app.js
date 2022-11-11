@@ -28,7 +28,6 @@ app.get('/', (request, response) => {
       .find()
       .toArray()
       .then(results => {
-        console.log(results)
         response.render('index.ejs', { ideas: results })
       })
   } catch (error) {

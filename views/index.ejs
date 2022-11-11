@@ -22,20 +22,24 @@
   </div>
   <hr />
   <div class="row">
-    <div class="col s12 m8">
+    <div class="col s12 m6 l6">
 
       <div class="card-panel red lighten-5">
         <div class="card-content">
-          <h3 class="card-title">Random Date:</h3>
+          <h3 class="card-title">Pick a Date:</h3>
           <ul>
             <% for(let i=0; i<ideas.length;i++) { %>
-            <li id="idea<%= i %> " class="hidden">
+            <li id="idea<%=i%>" class="hidden">
+              <h5>Idea:</h5>
               <div><%= ideas[i].idea %> </div>
-              <div><%= ideas[i].location %> </div>
+              <h5>Location:</h5>
+              <div><%= ideas[i].location %> <i class="right material-icons">delete</i>
+              <hr />
             </li>
             <% } %>
           </ul>
           <button type="button" class="waves-effect waves-light btn" id="randomDate">Random</button>
+          <button type="button" class="right waves-effect waves-light btn" id="showAll">Show All</button>
         </div>
       </div>
       <hr />

@@ -1,9 +1,10 @@
 let randomButton = document.querySelector('#randomDate')
 let showAllBtn = document.querySelector('#showAll')
 let listItem = document.querySelectorAll('li').length
-// function pickDate(dates){
-//     return dates[ Math.random() * dates.length + 1 ]
-// }
+let deleteBtn = document.querySelectorAll('.delete')
+
+showAllBtn.addEventListener('click', showAll)
+randomButton.addEventListener('click', unhideIdea)
 
 function unhideIdea () {
   for(let i=0; i<listItem; i++){
@@ -19,5 +20,7 @@ function showAll(){
     document.getElementById(`idea${i}`).classList.toggle('hidden')
   }
 }
-showAllBtn.addEventListener('click', showAll)
-randomButton.addEventListener('click', unhideIdea)
+
+async function deleteItem(){
+  const ideaText = this.parentNode.ch                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+}
